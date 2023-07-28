@@ -1,0 +1,24 @@
+{
+  "type": "module",
+  "name": "typescript",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",
+    "lint": "eslint . --ext .ts",
+    "lint-fix": "eslint . --ext .ts --fix",
+    "start": "npx ts-node --esm src/gpt4all-test.ts"
+  },
+  "dependencies": {
+    "gpt4all": "^2.1.0-alpha",
+    "gpt4all-ts-client": "^0.3.0"
+  },
+  "ts-node": {
+    "esm": true,
+    "experimentalSpecifierResolution": "node"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5"
+  }
+}
